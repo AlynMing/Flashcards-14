@@ -68,4 +68,27 @@ class ViewController: UIViewController {
     @IBAction func DidTapButtonThree(_ sender: Any) {
         button3.isHidden = true
     }
+    
+    func updateFlashCard(question: String, answer: String, extraAns1: String, extraAns2: String) {
+        QuestionLabel.text = question
+        button1.setTitle(extraAns1, for: .normal)
+        button2.setTitle(answer, for: .normal)
+        button3.setTitle(extraAns2, for: .normal)
+        AnswerLabel.text = answer
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navigationController = segue.destination as! UINavigationController
+        let creationController = navigationController.topViewController as! CreationViewController
+        creationController.flashcardsController = self
+        if segue.identifier == "EditSegue" {
+            creationController.initialQuestion = QuestionLabel.text
+            creationController.initialAnswer = AnswerLabel.text
+        
+        }
+        //else {
+         //   creationController.initialQuestion = "Question"
+        //    creationController.initialAnswer = "Answer"
+       // }
+        
+    }
 }
