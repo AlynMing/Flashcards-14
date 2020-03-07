@@ -5,7 +5,7 @@
 Add to last week's app by allowing the user to add their own questions
 
 ### App Walk-though
-<img src="http://g.recordit.co/kfajy8XrIo.gif" width=200><br>
+<img src="http://g.recordit.co/5AwmO5UMmO.gif" width=200><br>
 
 ## Required
 - [x] User can open the creation screen
