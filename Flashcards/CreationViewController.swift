@@ -20,7 +20,8 @@ class CreationViewController: UIViewController {
     
     var initialQuestion: String?
     var initialAnswer: String?
-    
+    var initialans1: String?
+    var initialans2: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,8 @@ class CreationViewController: UIViewController {
         //aTextField.text = "Answer"
         qTextField.text = initialQuestion
         aTextField.text = initialAnswer
+        extraAns1.text = initialans1
+        extraAns2.text = initialans2
 
         // Do any additional setup after loading the view.
     }
@@ -51,8 +54,11 @@ class CreationViewController: UIViewController {
             alert.addAction(okAction)
         }
         else {
-        
-        flashcardsController.updateFlashCard(question: questionText!, answer: answerText!, extraAns1: extAns1!, extraAns2: extAns2!)
+        var isExisting = false
+            if initialQuestion != nil {
+                isExisting = true
+            }
+        flashcardsController.updateFlashCard(question: questionText!, answer: answerText!, extraAns1: extAns1!, extraAns2: extAns2!, isExisting: isExisting)
         
         dismiss(animated: true)
         }

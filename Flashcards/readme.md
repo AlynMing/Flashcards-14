@@ -1,4 +1,24 @@
 ## FlashCards_App
+
+## Lab 3
+
+### App Description
+Add to last week's app by allowing a user to add mutiple questions, delete questions, edit existing questions and saving them so that they can be reopened. 
+
+### App Walk-though
+
+<img src="http://g.recordit.co/eQWfWYWIfy.gif" width=200><br>
+<img src="http://g.recordit.co/Dh2RSsDWrY.gif" width=200><br>
+
+## Required
+- [x] User can browse through multiple flashcards
+- [x] User can re-open the app and see previously created flashcards
+- [x] Push code to GitHub
+## Optional
+- [x] User can delete a flashcard
+- [x] User can edit existing flashcard
+- [x] User can store multiple choice questions
+
 ## Lab 2
 
 ### App Description
