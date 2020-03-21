@@ -92,8 +92,9 @@ class ViewController: UIViewController {
         
         //Add initial if needed
         if flashcards.count == 0 {
-            updateFlashCard(question: "Who won the first FIFA World Cup?", answer: "Uruguay", extraAns1: "Argentina", extraAns2: "Paraguay", isExisting: true)
+            updateFlashCard(question: "Who won the first FIFA World Cup?", answer: "Uruguay", extraAns1: "Argentina", extraAns2: "Paraguay", isExisting: false)
         }
+        
         else {
             updateLabels()
             
@@ -298,7 +299,7 @@ class ViewController: UIViewController {
         //Read Dictionary Array from the disk
         if let dictionaryArray = UserDefaults.standard.array(forKey: "flashcards") as? [[String: String]] {
             //we have a dictionary array
-            let savedCards = dictionaryArray.map { dictionary -> Flashcard in return Flashcard(question: dictionary["question"]!, answer: dictionary["answer"]!, extra1: dictionary["extra1"] ?? "", extra2: dictionary["extra2"] ?? "")}
+            let savedCards = dictionaryArray.map { dictionary -> Flashcard in return Flashcard(question: dictionary["question"]!, answer: dictionary["answer"]!, extra1: dictionary["extra1"]!, extra2: dictionary["extra2"]!)}
             
             //put all these cards into our flashcards array
             flashcards.append(contentsOf: savedCards)
